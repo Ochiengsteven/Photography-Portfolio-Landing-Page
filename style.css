@@ -21,6 +21,32 @@ ul {
   list-style: none;
 }
 
+a {
+  cursor: pointer;
+  transition: ease-in-out 0.3s all;
+  text-decoration: none;
+}
+
+.nav-sections {
+  position: relative;
+  text-align: center;
+}
+
+.nav-sections::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #e9e2e2;
+  top: 100%;
+  left: 0%;
+  transition: width 1s ease-in-out;
+}
+
+.nav-sections:hover::before {
+  width: 92%;
+}
+
 .left,
 .right {
   position: absolute;
@@ -74,6 +100,17 @@ ul {
   flex: 1;
 }
 
+.collection button {
+  border: 1px solid #fff;
+  background: none;
+  color: #fff;
+  padding: 3px;
+  letter-spacing: 3px;
+  font-size: 8px;
+  font-weight: 600;
+  text-align: center;
+}
+
 .nav .explore {
   flex: 4;
 }
@@ -102,7 +139,7 @@ ul {
 }
 
 .img-wrapper .karina {
-  background-image: url('./img/karina.jpg');
+  background-image: url('./img/engineer.jpg');
   background-size: cover;
   height: 550px;
   width: 0;
